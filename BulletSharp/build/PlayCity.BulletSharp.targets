@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
-    <AllBinaries Include="BulletSharp.dll.config;libbulletc-windows-x86.dll;libbulletc-windows-x64.dll;libbulletc-linux-x86.so;libbulletc-linux-x64.so" />
+    <AllBinaries Include="PlayCity.BulletSharp.dll.config;libbulletc-windows-x86.dll;libbulletc-windows-x64.dll;libbulletc-linux-x86.so;libbulletc-linux-x64.so" />
   </ItemGroup>
   <ItemGroup Condition="'$(Platform)' == 'anycpu'">
     <InputBinaries Include="libbulletc-windows-x64.dll;@(AllBinaries)" />
