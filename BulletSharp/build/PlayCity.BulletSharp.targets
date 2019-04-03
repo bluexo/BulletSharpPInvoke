@@ -16,7 +16,7 @@
     <InputBinaries Include="libbulletc-windows-x64.dll;@(AllBinaries)" />
     <OutputBinaries Include="libbulletc.dll;@(AllBinaries)" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <BinariesSource Include="@(InputBinaries->'$(MSBuildThisFileDirectory)%(Identity)')" />
     <BinariesTarget Include="@(OutputBinaries->'$(OutputPath)%(Identity)')" />
