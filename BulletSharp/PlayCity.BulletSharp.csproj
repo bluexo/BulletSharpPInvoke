@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>PlayCity.BulletSharp</PackageId>
+    <Authors>BulletSharp</Authors>
+    <Company>BulletSharp</Company>
+    <Product>BulletSharp</Product>
+    <RootNamespace>PlayCity.BulletSharp</RootNamespace>
+    <AssemblyName>PlayCity.BulletSharp</AssemblyName>
+    <BaseIntermediateOutputPath>obj/netcoreapp2.0</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE;BULLET_OBJECT_TRACKING</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="demos\**" />
+    <Compile Remove="obj\**" />
+    <Compile Remove="test\**" />
+    <EmbeddedResource Remove="demos\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <EmbeddedResource Remove="test\**" />
+    <None Remove="demos\**" />
+    <None Remove="obj\**" />
+    <None Remove="test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="build\BulletSharp.DotNetCore.targets">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
